@@ -9,15 +9,34 @@ class AppRoutes {
         routes: "HomeScreen",
         name: "Pantalla de Inicio",
         screen: const HomeScreen(),
-        icon: Icons.home_max)
+        icon: Icons.home_max),
+    MenuOptions(
+        routes: "CardScreen",
+        name: "Tarjetas de Imagenes",
+        icon: Icons.browse_gallery_rounded,
+        screen: const CardScreen()),
+    MenuOptions(
+        routes: "AlertScreen",
+        icon: Icons.lock_clock_rounded,
+        name: "Pantalla de Alarma",
+        screen: const AlertScreen()),
+    MenuOptions(
+        routes: "ListView",
+        icon: Icons.calendar_month_rounded,
+        name: "Pantalla Alerta",
+        screen: ListView())
   ];
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+    Map<String, Widget Function(BuildContext)> appRoutes = {};
+    return appRoutes;
+  }
 
-  static Map<String, Widget Function(BuildContext)> routes = {
-    'ListView': (BuildContext context) => const ListViewScreen(),
-    'CardScreen': (BuildContext context) => const CardScreen(),
-    'AlertScreen': (BuildContext context) => const AlertScreen(),
-    'HomeScreen': (BuildContext context) => const HomeScreen(),
-  };
+  //static Map<String, Widget Function(BuildContext)> routes = {
+  //  'ListView': (BuildContext context) => const ListViewScreen(),
+  //  'CardScreen': (BuildContext context) => const CardScreen(),
+  //  'AlertScreen': (BuildContext context) => const AlertScreen(),
+  //  'HomeScreen': (BuildContext context) => const HomeScreen(),
+  //};
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
       builder: (context) => const AlertScreen(),
