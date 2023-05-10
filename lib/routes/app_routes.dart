@@ -27,15 +27,11 @@ class AppRoutes {
         screen: ListView())
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
-<<<<<<< HEAD
-    return getAppRoutes();
-=======
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     for (final option in menuOptions) {
       appRoutes.addAll({option.routes: (BuildContext context) => option.screen});
     }
     return appRoutes;
->>>>>>> 3839ce329fa9d414d7d099ec3e3d14fb8c0bfebb
   }
 
   //static Map<String, Widget Function(BuildContext)> routes = {
