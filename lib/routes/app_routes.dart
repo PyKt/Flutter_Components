@@ -9,10 +9,30 @@ class AppRoutes {
         routes: "HomeScreen",
         name: "Pantalla de Inicio",
         screen: const HomeScreen(),
-        icon: Icons.home_max)
+        icon: Icons.home_max),
+    MenuOptions(
+        routes: "CardScreen",
+        name: "Tarjetas de Imágenes",
+        icon: Icons.browse_gallery_rounded,
+        screen: const CardScreen()),
+    MenuOptions(
+        routes: "AlertScreen",
+        icon: Icons.lock_clock_rounded,
+        name: "Pantalla de Alarma",
+        screen: const AlertScreen()),
+    MenuOptions(
+        routes: "ListView",
+        icon: Icons.calendar_month_rounded,
+        name: "Pantalla Alerta",
+        screen: ListView())
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+<<<<<<< HEAD
     return getAppRoutes();
+=======
+    Map<String, Widget Function(BuildContext)> appRoutes = {};
+    return appRoutes;
+>>>>>>> 3839ce329fa9d414d7d099ec3e3d14fb8c0bfebb
   }
 
   //static Map<String, Widget Function(BuildContext)> routes = {
