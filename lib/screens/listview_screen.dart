@@ -1,4 +1,3 @@
-import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class ListViewScreen extends StatelessWidget {
@@ -32,9 +31,9 @@ class ListViewScreen extends StatelessWidget {
             print(mylist);
 
             //iniciamos una ruta
-            final homescreenroute =
-                MaterialPageRoute(builder: (context) => const HomeScreen());
-            Navigator.push(context, homescreenroute);
+            // final homescreenroute =
+            //     MaterialPageRoute(builder: (context) => const HomeScreen());
+            // Navigator.push(context, homescreenroute);
           },
         ),
         separatorBuilder: (_, __) => const Divider(),

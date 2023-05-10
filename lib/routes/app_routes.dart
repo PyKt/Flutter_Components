@@ -7,24 +7,24 @@ class AppRoutes {
   static final menuOptions = <MenuOptions>[
     MenuOptions(
         routes: "HomeScreen",
-        name: "Pantalla de Inicio",
+        name: "Inicio",
         screen: const HomeScreen(),
-        icon: Icons.home_max),
+        icon: Icons.home),
     MenuOptions(
         routes: "CardScreen",
-        name: "Tarjetas de Imágenes",
+        name: "Tarjetas",
         icon: Icons.browse_gallery_rounded,
         screen: const CardScreen()),
     MenuOptions(
         routes: "AlertScreen",
         icon: Icons.lock_clock_rounded,
-        name: "Pantalla de Alarma",
+        name: "Alerta",
         screen: const AlertScreen()),
     MenuOptions(
         routes: "ListView",
         icon: Icons.calendar_month_rounded,
-        name: "Pantalla Alerta",
-        screen: ListView())
+        name: "Listas",
+        screen: const ListViewScreen())
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
