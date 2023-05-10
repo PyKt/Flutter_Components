@@ -11,13 +11,16 @@ class AppRoutes {
         screen: const HomeScreen(),
         icon: Icons.home_max)
   ];
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+    return getAppRoutes();
+  }
 
-  static Map<String, Widget Function(BuildContext)> routes = {
-    'ListView': (BuildContext context) => const ListViewScreen(),
-    'CardScreen': (BuildContext context) => const CardScreen(),
-    'AlertScreen': (BuildContext context) => const AlertScreen(),
-    'HomeScreen': (BuildContext context) => const HomeScreen(),
-  };
+  //static Map<String, Widget Function(BuildContext)> routes = {
+  //  'ListView': (BuildContext context) => const ListViewScreen(),
+  //  'CardScreen': (BuildContext context) => const CardScreen(),
+  //  'AlertScreen': (BuildContext context) => const AlertScreen(),
+  //  'HomeScreen': (BuildContext context) => const HomeScreen(),
+  //};
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
       builder: (context) => const AlertScreen(),
