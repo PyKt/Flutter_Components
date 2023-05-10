@@ -12,7 +12,7 @@ class AppRoutes {
         icon: Icons.home_max),
     MenuOptions(
         routes: "CardScreen",
-        name: "Tarjetas de Imagenes",
+        name: "Tarjetas de Imágenes",
         icon: Icons.browse_gallery_rounded,
         screen: const CardScreen()),
     MenuOptions(
