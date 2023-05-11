@@ -5,9 +5,20 @@ class CardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('CardScreen'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Card"),
+        elevation: 0,
+      ),
+      body: const Center(),
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniStartDocked,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pushNamed(context, "HomeScreen");
+        },
+        label: const Text("Home"),
+        icon: const Icon(Icons.home_outlined),
       ),
     );
   }
