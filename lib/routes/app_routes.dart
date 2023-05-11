@@ -13,17 +13,17 @@ class AppRoutes {
     MenuOptions(
         routes: "CardScreen",
         name: "Tarjetas",
-        icon: Icons.browse_gallery_rounded,
+        icon: Icons.menu_open,
         screen: const CardScreen()),
     MenuOptions(
         routes: "AlertScreen",
-        icon: Icons.lock_clock_rounded,
         name: "Alerta",
+        icon: Icons.add_alert_outlined,
         screen: const AlertScreen()),
     MenuOptions(
         routes: "ListView",
-        icon: Icons.calendar_month_rounded,
         name: "Listas",
+        icon: Icons.list,
         screen: const ListViewScreen())
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
