@@ -25,6 +25,7 @@ class AppRoutes {
         name: "Listas",
         icon: Icons.list,
         screen: const ListViewScreen())
+
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};

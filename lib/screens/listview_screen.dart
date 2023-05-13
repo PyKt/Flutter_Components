@@ -9,7 +9,6 @@ class ListViewScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: Colors.purple,
         elevation: 0,
         centerTitle: true,
         title: const Text(
@@ -24,7 +23,6 @@ class ListViewScreen extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.bold), opciones[i]),
           trailing: const Icon(
             Icons.arrow_forward_ios_outlined,
-            color: Colors.purpleAccent,
           ),
           onTap: () {
             final mylist = opciones[i];
@@ -44,7 +42,6 @@ class ListViewScreen extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, 'AlertScreen');
         },
-        backgroundColor: Colors.purple,
         icon: const Icon(
           Icons.ios_share_sharp,
         ),

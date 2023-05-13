@@ -8,6 +8,7 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Card"),
+        centerTitle: true,
         elevation: 0,
       ),
       body: const Center(),
