@@ -8,7 +8,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final menuGeneral = AppRoutes.menuOptions;
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         title: const Text('Home Screen'),
         centerTitle: true,

@@ -8,11 +8,11 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Card"),
+        centerTitle: true,
         elevation: 0,
       ),
       body: const Center(),
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniStartDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.pushNamed(context, "HomeScreen");
