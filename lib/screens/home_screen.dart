@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_components/routes/app_routes.dart';
 
@@ -15,7 +16,11 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
-                leading: Icon(menuGeneral[index].icon),
+                leading: IconTheme(
+                    data: MyTheme.iconThemeCustom,
+                    child: Icon(menuGeneral[index].icon)),
+
+                //Icon(menuGeneral[index].icon,  Color: MyTheme.primary),
                 title: Text(menuGeneral[index].name),
                 onTap: () {
                   Navigator.pushNamed(context, menuGeneral[index].routes);

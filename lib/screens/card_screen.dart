@@ -12,7 +12,7 @@ class CardScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: const Center(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.pushNamed(context, "HomeScreen");
