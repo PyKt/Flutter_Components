@@ -7,27 +7,24 @@ class ListViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
         title: const Text(
           'My ListView',
-          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: ListView.separated(
         itemCount: opciones.length,
         itemBuilder: (context, i) => ListTile(
-          title: Text(
-              style: const TextStyle(fontWeight: FontWeight.bold), opciones[i]),
+          title: Text(opciones[i]),
           trailing: const Icon(
             Icons.arrow_forward_ios_outlined,
           ),
           onTap: () {
             final mylist = opciones[i];
             print(mylist);
-            Navigator.pushNamed(context, 'HomeScreen');
+            Navigator.pushNamed(context, "CardScreen");
 
             //iniciamos una ruta
             // final homescreenroute =
@@ -43,10 +40,9 @@ class ListViewScreen extends StatelessWidget {
           Navigator.pushNamed(context, 'AlertScreen');
         },
         icon: const Icon(
-          Icons.ios_share_sharp,
+          Icons.punch_clock,
         ),
-        label: const Text(
-            style: TextStyle(fontWeight: FontWeight.bold), "Hola mundo"),
+        label: const Text("To Alert"),
       ),
     );
   }

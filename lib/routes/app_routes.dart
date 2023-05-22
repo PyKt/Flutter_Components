@@ -5,7 +5,7 @@ import 'package:fl_components/models/menu_options.dart';
 class AppRoutes {
   static const initialRoute = 'HomeScreen';
   static final menuOptions = <MenuOptions>[
-    MenuOptions(
+    MenuOptions( 
         routes: "HomeScreen",
         name: "Inicio",
         screen: const HomeScreen(),
