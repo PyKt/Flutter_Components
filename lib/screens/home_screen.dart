@@ -12,7 +12,6 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         centerTitle: true,
-        elevation: 0,
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
