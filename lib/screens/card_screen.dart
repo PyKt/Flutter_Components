@@ -9,7 +9,6 @@ class CardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Card"),
         centerTitle: true,
-        elevation: 0,
       ),
       body: const Center(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

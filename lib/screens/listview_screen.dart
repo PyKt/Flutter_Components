@@ -8,7 +8,6 @@ class ListViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         centerTitle: true,
         title: const Text(
           'My ListView',
@@ -27,9 +26,9 @@ class ListViewScreen extends StatelessWidget {
             Navigator.pushNamed(context, "CardScreen");
 
             //iniciamos una ruta
-            // final homescreenroute =
+            // final homeScreenRoute =
             //     MaterialPageRoute(builder: (context) => const HomeScreen());
-            // Navigator.push(context, homescreenroute);
+            // Navigator.push(context, homeScreenRoute);
           },
         ),
         separatorBuilder: (_, __) => const Divider(),
