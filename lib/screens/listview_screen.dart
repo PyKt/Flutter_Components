@@ -22,7 +22,6 @@ class ListViewScreen extends StatelessWidget {
           ),
           onTap: () {
             final mylist = opciones[i];
-            print(mylist);
             Navigator.pushNamed(context, "CardScreen");
 
             //iniciamos una ruta
@@ -42,6 +41,7 @@ class ListViewScreen extends StatelessWidget {
           Icons.punch_clock,
         ),
         label: const Text("To Alert"),
+        backgroundColor: Colors.pink,
       ),
     );
   }

@@ -15,7 +15,6 @@ class MyTheme {
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     appBarTheme: const AppBarTheme(
-      
       color: dark,
     ),
     textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.blueAccent)),
