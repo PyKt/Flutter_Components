@@ -17,11 +17,13 @@ class CardScreen extends StatelessWidget {
           Card(
             child: Column(
               children: [
+                Image (image:  AssetImage("nutricionista_analisis.png")),
                 ListTile(
                   leading: Icon(
                     Icons.terminal_rounded,
                     color: MyTheme.light,
                   ),
+                  
                   title: Text('Unix-like'),
                   subtitle: Text(
                       'A Unix-like operating system is one that behaves in a manner similar to a Unix system, although not necessarily conforming to or being certified to any version of the Single UNIX Specification. A Unix-like application is one that behaves like the corresponding Unix command or shell.'),
