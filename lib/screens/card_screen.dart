@@ -1,4 +1,3 @@
-import 'package:fl_components/themes/my_personal_theme.dart';
 import 'package:flutter/material.dart';
 
 class CardScreen extends StatelessWidget {
@@ -17,17 +16,33 @@ class CardScreen extends StatelessWidget {
           Card(
             child: Column(
               children: [
-                Image (image:  AssetImage("nutricionista_analisis.png")),
                 ListTile(
-                  leading: Icon(
-                    Icons.terminal_rounded,
-                    color: MyTheme.light,
-                  ),
-                  
-                  title: Text('Unix-like'),
+                  title: Text('Mac mini'),
                   subtitle: Text(
-                      'A Unix-like operating system is one that behaves in a manner similar to a Unix system, although not necessarily conforming to or being certified to any version of the Single UNIX Specification. A Unix-like application is one that behaves like the corresponding Unix command or shell.'),
+                      'El chip M1 de Apple impulsa los nuevos MacBook Air, MacBook Pro y Mac mini'),
+                ),
+                FadeInImage(
+                  fadeInCurve: Curves.bounceIn,
+                  placeholder: AssetImage('lib/image/loading-ice.gif'),
+                  image: NetworkImage(
+                      "https://tidbits.com/uploads/2020/11/M1-Mac-mini.jpg"),
                 )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text("Hackitosh"),
+                  subtitle: Text(
+                      "Se conoce como Hackintosh a cualquier máquina no fabricada por Apple capaz de ejecutar el sistema operativo de las computadoras Macintosh: Mac OS."),
+                ),
+                FadeInImage(
+                    fadeInCurve: Curves.bounceIn,
+                    placeholder: AssetImage('lib/image/loading-ice.gif'),
+                    image: NetworkImage(
+                        "https://i.ytimg.com/vi/1PAPB2znnb4/maxresdefault.jpg"))
               ],
             ),
           )
