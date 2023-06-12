@@ -8,13 +8,9 @@ class PersonalCard2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Card(
-      color: Colors.lightBlue,
       elevation: 1,
       child: Column(
         children: [
-          ListTile(
-            title: Text("Hackintosh"),
-          ),
           FadeInImage(
               placeholder: AssetImage('lib/image/loading-ice.gif'),
               image: NetworkImage(

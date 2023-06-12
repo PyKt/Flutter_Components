@@ -21,7 +21,7 @@ class ListViewScreen extends StatelessWidget {
             Icons.arrow_forward_ios_outlined,
           ),
           onTap: () {
-            final mylist = opciones[i];
+            //final mylist = opciones[i];
             Navigator.pushNamed(context, "CardScreen");
 
             //iniciamos una ruta

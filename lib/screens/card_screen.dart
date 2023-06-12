@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import '../providers/providers.dart';
 
-import '../providers/card1.dart';
-import '../providers/card2.dart';
+
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
