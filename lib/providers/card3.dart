@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class PersonalCard1 extends StatelessWidget {
-  const PersonalCard1({
+class PersonalCard3 extends StatelessWidget {
+  const PersonalCard3({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return  const Card(
+    return const Card(
       elevation: 4,
       child: Column(
         children: [
           FadeInImage(
             placeholder: AssetImage('lib/image/loading-ice.gif'),
             image: NetworkImage(
-                "https://www.ilounge.com/wp-content/uploads/2020/12/m1-mac-mini-hero.jpg"),
+                "https://img.bee-link.com/media/upload/v/h1/vh1gfiy6khimyfe1684935834.jpg"),
           ),
           
         ],

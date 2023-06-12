@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../providers/providers.dart';
 
-
-
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
 
@@ -14,24 +12,13 @@ class CardScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
         children: const [
           PersonalCard1(),
           PersonalCard2(),
+          PersonalCard3(),
+          PersonalCard4(),
         ],
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.pushNamed(context, "HomeScreen");
-        },
-        label: const Text('Home'),
-        icon: const Icon(Icons.apple),
-        backgroundColor: Colors.pink,
       ),
     );
   }
 }
-
-
-

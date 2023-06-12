@@ -19,7 +19,7 @@ class AppRoutes {
         routes: "AlertScreen",
         name: "Alerta",
         icon: Icons.add_alert_outlined,
-        screen: const AlertScreen()),
+        screen: AlertScreen()),
     MenuOptions(
         routes: "ListView",
         name: "Listas",
@@ -44,7 +44,7 @@ class AppRoutes {
   //};
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) => const AlertScreen(),
+      builder: (context) =>  AlertScreen(),
     );
   }
 }
