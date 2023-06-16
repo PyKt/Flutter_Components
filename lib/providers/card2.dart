@@ -12,7 +12,6 @@ class PersonalCard2 extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 270,
             child: FadeInImage(
                 placeholder: AssetImage('lib/image/loading-ice.gif'),
                 image: NetworkImage(
