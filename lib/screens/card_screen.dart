@@ -14,9 +14,13 @@ class CardScreen extends StatelessWidget {
       body: ListView(
         children: const [
           PersonalCard1(),
+          SizedBox(height: 10),
           PersonalCard2(),
+          SizedBox(height: 10),
           PersonalCard3(),
+          SizedBox(height: 10),
           PersonalCard4(),
+          SizedBox(height: 10),
         ],
       ),
     );

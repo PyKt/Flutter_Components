@@ -7,16 +7,23 @@ class PersonalCard3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15)
+      ),
+      shadowColor: Colors.deepPurple.withOpacity(0.5),
       elevation: 4,
-      child: Column(
+      child: const Column(
         children: [
           FadeInImage(
-            placeholder: AssetImage('lib/image/loading-ice.gif'),
+            placeholder: AssetImage('lib/image/jar-loading.gif'),
             image: NetworkImage(
-                "https://img.bee-link.com/media/upload/v/h1/vh1gfiy6khimyfe1684935834.jpg"),
+                "https://www.techspot.com/articles-info/2119/images/2020-11-03-image-5.jpg"),
+            width: double.infinity,
+            height: 200,
+            fit: BoxFit.cover,
           ),
-          
         ],
       ),
     );
