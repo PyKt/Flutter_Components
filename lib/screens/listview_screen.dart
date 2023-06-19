@@ -22,7 +22,7 @@ class ListViewScreen extends StatelessWidget {
           ),
           onTap: () {
             //final mylist = opciones[i];
-            Navigator.pushNamed(context, "CardScreen");
+            Navigator.pushReplacementNamed(context, "CardScreen");
 
             //iniciamos una ruta
             // final homeScreenRoute =

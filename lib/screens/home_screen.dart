@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
                 //Icon(menuGeneral[index].icon,  Color: MyTheme.primary),
                 title: Text(menuGeneral[index].name),
                 onTap: () {
-                  Navigator.pushNamed(context, menuGeneral[index].routes);
+                  Navigator.pushReplacementNamed(context, menuGeneral[index].routes);
                   //Navigator.pushReplacement(context, ruta); Esto es util para login
                 },
               ),
