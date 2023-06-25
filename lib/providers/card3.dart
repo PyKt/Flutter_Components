@@ -15,7 +15,7 @@ class PersonalCard3 extends StatelessWidget {
       shadowColor: Colors.deepPurple.withOpacity(0.5),
       elevation: 4,
       child: const Column(
-        children: [
+        children:<Widget> [
           FadeInImage(
             placeholder: AssetImage('lib/image/jar-loading.gif'),
             image: NetworkImage(
