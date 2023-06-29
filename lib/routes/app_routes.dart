@@ -5,7 +5,7 @@ import 'package:fl_components/models/menu_options.dart';
 class AppRoutes {
   static const initialRoute = 'HomeScreen';
   static final menuOptions = <MenuOptions>[
-    MenuOptions( 
+    MenuOptions(
         routes: "HomeScreen",
         name: "Inicio",
         screen: const HomeScreen(),
@@ -24,9 +24,19 @@ class AppRoutes {
         routes: "ListView",
         name: "Listas",
         icon: Icons.list,
-        screen: const ListViewScreen())
-
+        screen: const ListViewScreen()),
+    MenuOptions(
+        routes: "AvatarScreen",
+        name: "Avatar",
+        icon: Icons.supervised_user_circle_outlined,
+        screen: const AvatarScreen()),
+    MenuOptions(
+        routes: "AnimatedScreen",
+        name: "Animation",
+        icon: Icons.animation_outlined,
+        screen: const AnimatedScreen())
   ];
+
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     for (final option in menuOptions) {
@@ -44,7 +54,7 @@ class AppRoutes {
   //};
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) =>  const AlertScreen(),
+      builder: (context) => const AlertScreen(),
     );
   }
 }
