@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/error_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:fl_components/models/menu_options.dart';
@@ -5,11 +6,6 @@ import 'package:fl_components/models/menu_options.dart';
 class AppRoutes {
   static const initialRoute = 'HomeScreen';
   static final menuOptions = <MenuOptions>[
-    MenuOptions(
-        routes: "HomeScreen",
-        name: "Inicio",
-        screen: const HomeScreen(),
-        icon: Icons.home),
     MenuOptions(
         routes: "CardScreen",
         name: "Tarjetas",
@@ -34,11 +30,18 @@ class AppRoutes {
         routes: "AnimatedScreen",
         name: "Animation",
         icon: Icons.animation_outlined,
-        screen: const AnimatedScreen())
+        screen: const AnimatedScreen()),
+    MenuOptions(
+        routes: "InputsScreen",
+        name: "Texto",
+        icon: Icons.text_rotation_none_outlined,
+        screen: const InputsScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes
+        .addAll({'HomeScreen': (BuildContext context) => const HomeScreen()});
     for (final option in menuOptions) {
       appRoutes
           .addAll({option.routes: (BuildContext context) => option.screen});
@@ -54,7 +57,7 @@ class AppRoutes {
   //};
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) => const AlertScreen(),
+      builder: (context) => const ErrorScreen(),
     );
   }
 }

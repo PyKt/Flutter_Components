@@ -12,6 +12,13 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         centerTitle: true,
+     
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+        ),
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
@@ -22,7 +29,8 @@ class HomeScreen extends StatelessWidget {
                 //Icon(menuGeneral[index].icon,  Color: MyTheme.primary),
                 title: Text(menuGeneral[index].name),
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, menuGeneral[index].routes);
+                  Navigator.pushNamed(
+                      context, menuGeneral[index].routes);
                   //Navigator.pushReplacement(context, ruta); Esto es util para login
                 },
               ),

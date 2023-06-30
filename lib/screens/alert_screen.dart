@@ -70,6 +70,7 @@ class AlertScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         centerTitle: true,
         actions: [
           IconButton(

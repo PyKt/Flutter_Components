@@ -30,6 +30,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: const Text('Animated Screen'),
         actions: [
           IconButton(
@@ -40,7 +41,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         ],
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInCubic,
           width: _width,
           height: _height,
           decoration:

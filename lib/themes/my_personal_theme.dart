@@ -14,6 +14,7 @@ class MyTheme {
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
+    useMaterial3: true,
     appBarTheme: const AppBarTheme(
       color: dark,
     ),
