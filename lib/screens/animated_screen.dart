@@ -1,5 +1,4 @@
 import 'dart:math' show Random;
-
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {

@@ -11,6 +11,23 @@ class MyTheme {
     appBarTheme: const AppBarTheme(
       color: light,
     ),
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: light),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10), topLeft: Radius.circular(10)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+      ),
+      border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+        Radius.circular(15),
+      )),
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -18,8 +35,15 @@ class MyTheme {
     appBarTheme: const AppBarTheme(
       color: dark,
     ),
-    textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.blueAccent)),
-    scaffoldBackgroundColor: Colors.black,
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: dark),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+      ),
+    ),
   );
   static const IconThemeData iconThemeCustom = IconThemeData(
     color: Color(0xFFD13030),
