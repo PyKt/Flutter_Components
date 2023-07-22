@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
 
 class TextFormModified extends StatelessWidget {
+  final String? hintText;
+  final String? labelText;
+  final String? helperText;
+  final Icon? prefixIcon;
+
   const TextFormModified({
+    this.helperText,
+    this.hintText,
+    this.labelText,
+    this.prefixIcon,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: const InputDecoration(
-        hintText: 'Solo Nombre',
-        labelText: "Nombre",
-        helperText: "Ni letras ni puntos",
-        prefixIcon: Icon(Icons.people_alt),
+      decoration: InputDecoration(
+        hintText: hintText,
+        labelText: labelText,
+        helperText: helperText,
+        prefixIcon: prefixIcon,
         fillColor: Colors.blueGrey,
       ),
       autofocus: true,

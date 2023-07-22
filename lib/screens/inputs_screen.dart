@@ -25,7 +25,28 @@ class InputsScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(
               children: [
-                TextFormModified(),
+                TextFormModified(
+                  hintText: "Nombre",
+                  labelText: "Tu nombre",
+                  helperText: "Mínimo 3 caracteres",
+                  prefixIcon: Icon(Icons.people_alt),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextFormModified(
+                  hintText: "Apellido",
+                  labelText: "Primer apellido",
+                  helperText: "Apellido",
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextFormModified(
+                  hintText: "Mayúsculas, minúsculas y numero",
+                  helperText: "Contraseña",
+                  prefixIcon: Icon(Icons.password_outlined),
+                ),
               ],
             ),
           ),
