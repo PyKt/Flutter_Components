@@ -20,33 +20,52 @@ class InputsScreen extends StatelessWidget {
             )
           ],
         ),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(
               children: [
-                TextFormModified(
+                const TextFormModified(
                   hintText: "Nombre",
                   labelText: "Tu nombre",
                   helperText: "Mínimo 3 caracteres",
                   prefixIcon: Icon(Icons.people_alt),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                TextFormModified(
+                const TextFormModified(
                   hintText: "Apellido",
-                  labelText: "Primer apellido",
-                  helperText: "Apellido",
+                  labelText: "Apellido",
+                  helperText: "Mínimo 3 caracteres",
+                  prefixIcon: Icon(Icons.people_alt),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                TextFormModified(
+                const TextFormModified(
+                  hintText: "Correo Electrónico",
+                  labelText: "Email",
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const TextFormModified(
                   hintText: "Mayúsculas, minúsculas y numero",
                   helperText: "Contraseña",
-                  prefixIcon: Icon(Icons.password_outlined),
+                  obscureText: true,
+                  prefixIcon: Icon(
+                    Icons.password_outlined,
+                  ),
                 ),
+                ElevatedButton(
+                    child: const SizedBox(
+                        width: double.infinity,
+                        child: Center(
+                          child: Text("Guardar"),
+                        )),
+                    onPressed: () {}),
               ],
             ),
           ),

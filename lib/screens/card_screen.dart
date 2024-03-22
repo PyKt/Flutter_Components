@@ -1,3 +1,4 @@
+import 'package:fl_components/providers/card5.dart';
 import 'package:flutter/material.dart';
 import '../providers/providers.dart';
 
@@ -21,6 +22,7 @@ class CardScreen extends StatelessWidget {
           SizedBox(height: 10),
           PersonalCard4(),
           SizedBox(height: 10),
+          PersonalCard5(),
         ],
       ),
     );

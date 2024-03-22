@@ -7,7 +7,7 @@ class MyTheme {
       IconThemeData(color: Color(0xFF3F51B5));
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    useMaterial3: true,
+    
     appBarTheme: const AppBarTheme(
       color: light,
     ),
@@ -31,7 +31,6 @@ class MyTheme {
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
-    useMaterial3: true,
     appBarTheme: const AppBarTheme(
       color: dark,
     ),

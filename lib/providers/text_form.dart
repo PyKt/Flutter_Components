@@ -5,18 +5,25 @@ class TextFormModified extends StatelessWidget {
   final String? labelText;
   final String? helperText;
   final Icon? prefixIcon;
+  final TextInputType? keyboardType;
+  final bool obscureText;
 
   const TextFormModified({
+    super.key,
     this.helperText,
     this.hintText,
     this.labelText,
     this.prefixIcon,
-    super.key,
+    this.keyboardType,
+    this.obscureText = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
+      obscureText: obscureText,
+
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
@@ -28,7 +35,8 @@ class TextFormModified extends StatelessWidget {
       initialValue: "",
       textCapitalization: TextCapitalization.words,
       onChanged: (value) {
-        print('value: $value');
+        debugPrint(
+            'value: $value'); //en producción usamos debugPrint en lugar de print
       },
       validator: (value) {
         if (value == null) return "Campo obligatorio ";

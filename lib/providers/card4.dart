@@ -12,39 +12,17 @@ class PersonalCard4 extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       shadowColor: Colors.deepPurple.withOpacity(0.5),
       elevation: 4,
-      child: Column(
+      child: const Column(
         children: [
-          const FadeInImage(
+          FadeInImage(
             placeholder: AssetImage('lib/image/jar-loading.gif'),
             image: NetworkImage(
-                "https://www.techspot.com/articles-info/2119/images/2020-11-03-image-4.jpg"),
+                "https://hips.hearstapps.com/hmg-prod/images/pixel-7-review-6581cea92b208.jpg?crop=0.563xw:1.00xh;0.228xw,0&resize=1200:*"),
             width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              right: 1,
-              top: 0,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, "HomeScreen");
-                  },
-                  child: const Text('Home'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Null;
-                  },
-                  child: const Text('Cancel'),
-                ),
-              ],
-            ),
-          ),
+
         ],
       ),
     );

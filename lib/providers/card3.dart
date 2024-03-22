@@ -19,7 +19,7 @@ class PersonalCard3 extends StatelessWidget {
           FadeInImage(
             placeholder: AssetImage('lib/image/jar-loading.gif'),
             image: NetworkImage(
-                "https://www.techspot.com/articles-info/2119/images/2020-11-03-image-5.jpg"),
+                "https://miro.medium.com/v2/resize:fit:1400/1*337CCWipDVtubJnHUrpFHw.jpeg"),
             width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
