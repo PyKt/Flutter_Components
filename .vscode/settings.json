@@ -4,5 +4,6 @@
         "listview",
         "mylist"
     ],
-    "avdmanager.sdkManager": "/home/alberto/Android/Sdk/cmdline-tools/latest/bin/sdkmanager"
+    "avdmanager.sdkManager": "/home/alberto/Android/Sdk/cmdline-tools/latest/bin/sdkmanager",
+    "cmake.sourceDirectory": "/home/alberto/Development/flutter_components/linux"
 }

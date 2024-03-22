@@ -3,13 +3,14 @@ import 'package:fl_components/screens/screens.dart';
 import 'package:fl_components/routes/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final menuGeneral = AppRoutes.menuOptions;
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Home Screen'),
 
         shape: const RoundedRectangleBorder(

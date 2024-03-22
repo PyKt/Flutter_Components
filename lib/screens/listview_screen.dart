@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ListViewScreen extends StatelessWidget {
   final opciones = const ['Guardado', 'Compras', 'Ventas'];
-  const ListViewScreen({Key? key}) : super(key: key);
+  const ListViewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
