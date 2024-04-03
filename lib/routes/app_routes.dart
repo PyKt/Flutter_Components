@@ -1,7 +1,7 @@
-import 'package:fl_components/screens/error_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:fl_components/models/menu_options.dart';
+import 'package:fl_components/screens/error_screen.dart';
 
 class AppRoutes {
   static const initialRoute = 'HomeScreen';
@@ -35,7 +35,8 @@ class AppRoutes {
         routes: "InputsScreen",
         name: "Texto",
         icon: Icons.text_rotation_none_outlined,
-        screen: const InputsScreen())
+        screen: const InputsScreen()),
+    MenuOptions(routes: 'slider', icon: Icons.format_size_outlined, name: 'Slider and Checks' , screen: const SliderScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -60,4 +61,4 @@ class AppRoutes {
       builder: (context) => const ErrorScreen(),
     );
   }
-}
+}                                 
