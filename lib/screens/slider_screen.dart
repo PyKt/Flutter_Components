@@ -10,14 +10,23 @@ class SliderScreen extends StatefulWidget {
 
 class _SliderScreenState extends State<SliderScreen> {
   double _sliderValue = 50;
-  bool _sliderEnable = true;
+  bool _sliderEnable = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Slides and Checks'),
+          title: const Text('Slider Screen'),
+          actions: [
+            Checkbox(
+                activeColor: MyTheme.light,
+                value: _sliderEnable,
+                onChanged: (value) {
+                  _sliderEnable = value!;
+                  setState(() {});
+                }),
+          ],
         ),
         body: Column(
           children: <Widget>[
@@ -46,23 +55,51 @@ class _SliderScreenState extends State<SliderScreen> {
             //   }),
             // ),
 
-            SwitchListTile.adaptive(
-              title: const Text('Habilitar Slider'),
-              value: _sliderEnable,
-              onChanged: (value) => setState(() {
-                _sliderEnable = value;
-              }),
-            ),
+            // SwitchListTile.adaptive(
+            //   activeColor: MyTheme.light,
+            //   title: const Text('Habilitar Slider'),
+            //   value: _sliderEnable,
+            //   onChanged: (value) => setState(() {
+            //     _sliderEnable = value;
+            //   }),
+            // ),
             Expanded(
               child: SingleChildScrollView(
                 child: Image(
                   image: const NetworkImage(
-                      'https://thumbor.autonomous.ai/WPMm1OpqPssl7Aba6IHvVYJLI3I=/1600x900/smart/filters:format(webp)/https://storage.googleapis.com/s3-autonomous-upgrade-3/static/upload/images/new_post/programmer-room-setup-complete-guide-2112-1623257487398.jpg'),
+                      'https://setup-gaming.es/wp-content/uploads/2020/10/setup-gaming-moderno-1024x576.jpg'),
                   width: _sliderValue,
                   fit: BoxFit.contain,
                 ),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+                child: SingleChildScrollView(
+              child: Image(
+                image: const NetworkImage(
+                  'https://markellisreviews.com/wp-content/uploads/2023/02/DSC04858-optimized.jpg',
+                ),
+                width: _sliderValue,
+                fit: BoxFit.contain,
+              ),
+            )),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+                child: SingleChildScrollView(
+              child: Image(
+                image: const NetworkImage(
+                  'https://www.profesionalreview.com/wp-content/uploads/2023/01/M2-Mac-mini-internals.jpg',
+                ),
+                width: _sliderValue,
+                fit: BoxFit.contain,
+              ),
+            )),
+
             const SizedBox(
               height: 20,
             ),
