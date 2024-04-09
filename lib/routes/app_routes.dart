@@ -36,7 +36,16 @@ class AppRoutes {
         name: "Texto",
         icon: Icons.text_rotation_none_outlined,
         screen: const InputsScreen()),
-    MenuOptions(routes: 'slider', icon: Icons.format_size_outlined, name: 'Slider and Checks' , screen: const SliderScreen())
+    MenuOptions(
+        routes: 'slider',
+        icon: Icons.format_size_outlined,
+        name: 'Slider and Checks',
+        screen: const SliderScreen()),
+    MenuOptions(
+        routes: "ListViewBuild",
+        name: "Infinity Scroll",
+        icon: Icons.build,
+        screen: const ListViewBuilderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -55,10 +64,10 @@ class AppRoutes {
   //  'CardScreen': (BuildContext context) => const CardScreen(),
   //  'AlertScreen': (BuildContext context) => const AlertScreen(),
   //  'HomeScreen': (BuildContext context) => const HomeScreen(),
-  //};
+  //};"
   static Route<dynamic> onGenerareRoute(RouteSettings settings) {
     return MaterialPageRoute(
       builder: (context) => const ErrorScreen(),
     );
   }
-}                                 
+}
