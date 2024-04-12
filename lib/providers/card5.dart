@@ -23,29 +23,23 @@ class PersonalCard5 extends StatelessWidget {
               height: 200,
               fit: BoxFit.cover,
             ),
-
           ),
           Padding(
             padding: const EdgeInsets.only(
-            right: 1,
-            top: 0,
-          ),
-            child: Row(mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "HomeScreen");
-                },
-                child: const Text('Home'),
-              ),
-              TextButton(
-                onPressed: () {
-                  Null;
-                },
-                child: const Text('Cancel'),
-              ),
-            ],),
-
+              right: 1,
+              top: 0,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "HomeScreen");
+                  },
+                  child: const Text('Home'),
+                ),
+              ],
+            ),
           ),
         ],
       ),

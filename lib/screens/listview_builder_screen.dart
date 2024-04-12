@@ -66,7 +66,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                         'https://picsum.photos/500/300?image=${imageIds[index]}'));
               },
             ),
-            if (isLoading) // con esto aplico la condicional y puedo cargar la infomarcion
+            if (isLoading) // con esto aplico la condicional y puedo cargar la información
               Positioned(
                   bottom: 40,
                   left: medida.width * 0.5 - 10,
