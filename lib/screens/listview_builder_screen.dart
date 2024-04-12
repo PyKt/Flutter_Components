@@ -28,8 +28,13 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     setState(() {});
     await Future.delayed(const Duration(seconds: 3));
     add5();
-    isLoading = false;
+    isLoading = true;
     setState(() {});
+    if (scrollController.position.pixels + 100 <=
+        scrollController.position.maxScrollExtent) return;
+    scrollController.animateTo(scrollController.position.pixels + 120,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn);
   }
 
   void add5() {
@@ -64,8 +69,8 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
             if (isLoading) // con esto aplico la condicional y puedo cargar la infomarcion
               Positioned(
                   bottom: 40,
-                  left: medida.width * 0.5 - 30,
-                  child: _loadingIcon())
+                  left: medida.width * 0.5 - 10,
+                  child: _loadingIcon()),
           ],
         ),
       ),
