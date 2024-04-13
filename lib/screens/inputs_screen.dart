@@ -55,7 +55,6 @@ class InputsScreen extends StatelessWidget {
                       }),
 
                   const SizedBox(
-                    height: 30,),
                     height: 30,
                   ),
                   TextFormModified(
