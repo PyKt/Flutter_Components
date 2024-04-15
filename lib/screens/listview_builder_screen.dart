@@ -1,4 +1,5 @@
 import 'package:fl_components/screens/screens.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ListViewBuilderScreen extends StatefulWidget {
@@ -42,7 +43,15 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     imageIds.addAll([1, 2, 3, 4, 5].map((e) => lastId + e));
     setState(() {});
   }
+  Future <void> onRefresh() async{
+  await Future.delayed(const Duration(seconds: 2));
+  final lasId = imageIds.last;
 
+  imageIds.clear();
+  imageIds.add(lasId +1);
+  add5();
+
+  }
   @override
   Widget build(BuildContext context) {
     final medida = MediaQuery.of(context).size;
@@ -53,18 +62,21 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
         removeTop: true,
         child: Stack(
           children: [
-            ListView.builder(
-              controller: scrollController,
-              itemCount: imageIds.length,
-              itemBuilder: (BuildContext context, int index) {
-                return FadeInImage(
-                    width: double.infinity,
-                    height: 300,
-                    fit: BoxFit.cover,
-                    placeholder: const AssetImage('lib/image/jar-loading.gif'),
-                    image: NetworkImage(
-                        'https://picsum.photos/500/300?image=${imageIds[index]}'));
-              },
+            RefreshIndicator(
+              onRefresh: onRefresh,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: imageIds.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return FadeInImage(
+                      width: double.infinity,
+                      height: 300,
+                      fit: BoxFit.cover,
+                      placeholder: const AssetImage('lib/image/jar-loading.gif'),
+                      image: NetworkImage(
+                          'https://picsum.photos/500/300?image=${imageIds[index]}'));
+                },
+              ),
             ),
             if (isLoading) // con esto aplico la condicional y puedo cargar la información
               Positioned(

@@ -14,7 +14,6 @@ class InputsScreen extends StatelessWidget {
       'email': 'fava@gmail.com',
       'passwd': '12323',
       'role': 'Admin',
-
     };
     return Scaffold(
         appBar: AppBar(
@@ -44,7 +43,7 @@ class InputsScreen extends StatelessWidget {
                           value: 'Admin',
                           child: Text('Admin'),
                         ),
-                        DropdownMenuItem( 
+                        DropdownMenuItem(
                           value: 'Ordinary',
                           child: Text('Ordinary'),
                         )
@@ -53,7 +52,6 @@ class InputsScreen extends StatelessWidget {
                         print(values);
                         formValues['level'] = values ?? 'User level ';
                       }),
-
                   const SizedBox(
                     height: 30,
                   ),
@@ -100,9 +98,6 @@ class InputsScreen extends StatelessWidget {
                     formProperty: 'passwd',
                     formValues: (formValues),
                   ),
-
-
-
                   ElevatedButton(
                     child: const SizedBox(
                         width: double.infinity,
@@ -123,7 +118,6 @@ class InputsScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-
                 ],
               ),
             ),
